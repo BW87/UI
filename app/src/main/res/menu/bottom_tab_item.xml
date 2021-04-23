@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main"
+        android:icon="@drawable/ico_tab_bar_home"
+        android:enabled="true"
+        android:checked="true"
+        android:title="Main" />
+
+    <item
+        android:id="@+id/riskList"
+        android:icon="@drawable/ico_tab_bar_disaster_list"
+        android:enabled="true"
+        android:checked="true"
+        android:title="Risk List"/>
+
+    <item
+        android:id="@+id/medicalAid"
+        android:icon="@drawable/ico_tab_bar_medical_support"
+        android:enabled="true"
+        android:checked="true"
+
+        android:title="Medical Aid"/>
+
+    <item
+        android:id="@+id/emergencyContact"
+        android:icon="@drawable/ico_tab_bar_emergency_call"
+        android:enabled="true"
+        android:checked="true"
+        android:title="Emergency Contact"/>
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ico_tab_bar_app_setting"
+        android:enabled="true"
+        android:checked="true"
+        android:title="Setting"/>
+</menu>

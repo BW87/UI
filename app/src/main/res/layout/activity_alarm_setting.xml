@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".AlarmSettingActivity">
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="353dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="9dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="2sp"
+        android:text="서울특별시 서대문구 신촌동 이화여대길 92-8
+  신촌동주민센터 102"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ryu" />
+
+    <ImageButton
+        android:id="@+id/alarm_setting_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_check"
+        app:srcCompat="@drawable/ico_monitoring_setting_gray" />
+
+    <ImageView
+        android:id="@+id/face"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monitor"
+        app:srcCompat="@drawable/call_img_80_px" />
+
+    <TextView
+        android:id="@+id/ryu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="18dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="4sp"
+        android:text="Ryu Yeahna"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_title" />
+
+    <TextView
+        android:id="@+id/near"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Near (5Km)"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/left_range_button"
+        app:layout_constraintStart_toStartOf="@+id/left_range_button"
+        app:layout_constraintTop_toTopOf="@+id/left_range_button" />
+
+    <TextView
+        android:id="@+id/tenkm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="10Km"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/right_range_button"
+        app:layout_constraintStart_toStartOf="@+id/right_range_button"
+        app:layout_constraintTop_toTopOf="@+id/right_range_button" />
+
+    <TextView
+        android:id="@+id/storm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Storm"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/storm_button"
+        app:layout_constraintStart_toStartOf="@+id/storm_button"
+        app:layout_constraintTop_toTopOf="@+id/storm_button" />
+
+    <TextView
+        android:id="@+id/flood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Flood"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_button"
+        app:layout_constraintStart_toStartOf="@+id/flood_button"
+        app:layout_constraintTop_toTopOf="@+id/flood_button" />
+
+    <TextView
+        android:id="@+id/drought"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Drought"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/drought_button"
+        app:layout_constraintStart_toStartOf="@+id/drought_button"
+        app:layout_constraintTop_toTopOf="@+id/drought_button" />
+
+    <TextView
+        android:id="@+id/fire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Fire"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/fire_button"
+        app:layout_constraintStart_toStartOf="@+id/fire_button"
+        app:layout_constraintTop_toTopOf="@+id/fire_button" />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="User Defined"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/user_button"
+        app:layout_constraintStart_toStartOf="@+id/user_button"
+        app:layout_constraintTop_toTopOf="@+id/user_button" />
+
+    <TextView
+        android:id="@+id/tide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Tide"
+        android:textColor="#939495"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/tide_button"
+        app:layout_constraintStart_toStartOf="@+id/tide_button"
+        app:layout_constraintTop_toTopOf="@+id/tide_button" />
+
+    <ImageButton
+        android:id="@+id/location_check"
+        android:layout_width="49dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/background"
+        android:onClick="locationCheckClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_line"
+        app:srcCompat="@drawable/ico_chk_off" />
+
+    <ImageButton
+        android:id="@+id/storm_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="stormButtonClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typr_of_risk" />
+
+    <ImageButton
+        android:id="@+id/flood_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="floodButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle_line" />
+
+    <ImageButton
+        android:id="@+id/drought_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="droughtButtonClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storm_button" />
+
+    <ImageButton
+        android:id="@+id/fire_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="fireButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flood_button" />
+
+    <ImageButton
+        android:id="@+id/user_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="userButtonClick"
+        android:background="@drawable/select_off"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drought_button" />
+
+    <ImageButton
+        android:id="@+id/tide_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="tideButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fire_button" />
+
+    <TextView
+        android:id="@+id/type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Type of Lisk"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/typr_of_risk"
+        app:layout_constraintTop_toBottomOf="@+id/middle_line" />
+
+    <TextView
+        android:id="@+id/location_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Monitoring Location"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/monitor"
+        app:layout_constraintTop_toBottomOf="@+id/top_line" />
+
+    <ImageView
+        android:id="@+id/monitor"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_line"
+        app:srcCompat="@drawable/ico_monitoring_location" />
+
+    <ImageView
+        android:id="@+id/middle_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:background="#3d414a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monitor"
+        app:srcCompat="@drawable/div_line" />
+
+    <ImageView
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#3d414a"
+        app:layout_constraintTop_toBottomOf="@+id/left_range_button"
+        app:srcCompat="@drawable/div_line" />
+
+    <TextView
+        android:id="@+id/range_title"
+        android:layout_width="201dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Range of Alarm Information"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/range_image"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <ImageView
+        android:id="@+id/range_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@drawable/ico_disaster_how_far" />
+
+    <ImageButton
+        android:id="@+id/range_check"
+        android:layout_width="49dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/background"
+        android:onClick="rangeCheckClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:srcCompat="@drawable/ico_chk_off" />
+
+    <ImageButton
+        android:id="@+id/left_range_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="leftLocationButtonClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/range_title" />
+
+    <ImageButton
+        android:id="@+id/right_range_button"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/select_off"
+        android:onClick="rightRangeButtonClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/range_title" />
+
+    <ImageView
+        android:id="@+id/typr_of_risk"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle_line"
+        app:srcCompat="@drawable/ico_type_of_lisk" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/alarm_back_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/background"
+            android:onClick="alarmFinish"
+            android:src="@drawable/ico_arrow_back" />
+
+        <TextView
+            android:id="@+id/alarm_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="9sp"
+            android:text="Alarm Settings"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@color/background"
+        app:menu="@menu/bottom_tab_item"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/bottom_item_selector_color"
+        app:itemTextColor="@color/bottom_item_selector_color"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
