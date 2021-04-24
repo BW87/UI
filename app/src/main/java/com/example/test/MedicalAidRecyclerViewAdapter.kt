@@ -2,6 +2,7 @@ package com.example.test
 
 import android.content.Context
 import android.content.Intent
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,15 +24,18 @@ class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: 
 
     override fun onBindViewHolder(holder: MedicalViewHolder, position: Int) {
         holder.bind(medicalItemList[position], context)
+
     }
 
     inner class MedicalViewHolder(view : View) : RecyclerView.ViewHolder(view!!){
         val typeTextView = view.medical_type!!
         val nameTextView = view.medical_name!!
         val distanceTextView = view.medical_distance!!
-        val layout = view.aid_item_layout!!
+        val mLayout = view.aid_item_layout!!
 
         var check : Boolean = false
+
+
 
         fun bind(medicalItem : Medical_Item, context : Context){
 
@@ -44,17 +48,25 @@ class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: 
                     typeTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
                     nameTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
                     distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-                    layout.setBackgroundResource(R.drawable.medical_aid_on)
+                    mLayout.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
+
                     check = true
                 } else if(check){
                     typeTextView.setTextColor(ContextCompat.getColor(context, R.color.gray))
                     nameTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
                     distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
-                    layout.setBackgroundResource(R.drawable.medical_aid_off)
+                    mLayout.setBackgroundResource(R.drawable.round_corner_dark)
+
                     check = false
                 }
             }
         }
+    }
+
+    fun dpToPx(context : Context, dp : Int) : Int{
+        val px : Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), context.resources.displayMetrics)
+            .toInt()
+        return px
     }
 }
 
