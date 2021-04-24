@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_alarm_setting.view.*
 import kotlinx.android.synthetic.main.activity_medical.*
+import kotlinx.android.synthetic.main.aid_item.view.*
 
 class MedicalActivity : AppCompatActivity() {
 
@@ -29,7 +32,8 @@ class MedicalActivity : AppCompatActivity() {
             it.orientation = LinearLayoutManager.VERTICAL
         }
 
-        medicalActivityRecyclerView.adapter = MedicalAidRecyclerViewAdapter(this,medicalItemData)
+        val mAdapter = MedicalAidRecyclerViewAdapter(this, medicalItemData)
+        medicalActivityRecyclerView.adapter = mAdapter
         medicalActivityRecyclerView.addItemDecoration(VerticalSpaceItemDecoration(dpToPx(this,16)))
     }
 

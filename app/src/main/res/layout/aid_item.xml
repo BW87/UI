@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aid_item_layout"
     android:layout_width="379dp"
     android:layout_height="72dp"
-    android:background="@drawable/round_corner_dark" >
+    android:background="@drawable/round_corner_dark">
 
     <TextView
         android:id="@+id/medical_type"
