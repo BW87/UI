@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".ReportingRiskActivity">
+    <ImageButton
+        android:id="@+id/reporting_back_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:onClick="reportingBack"
+        android:background="@color/background"
+        app:layout_constraintEnd_toStartOf="@+id/emergency_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ico_arrow_back" />
+
+    <TextView
+        android:id="@+id/reporting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Reporting Risk"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/reporting_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/yellow"
+            android:text="Next"
+            android:stateListAnimator="@null"
+            android:onClick="goNext"
+            android:textSize="24sp"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:letterSpacing="-0.06"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/yellow" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

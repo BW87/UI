@@ -24,7 +24,20 @@ class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: 
 
     override fun onBindViewHolder(holder: MedicalViewHolder, position: Int) {
         holder.bind(medicalItemList[position], context)
+        holder.itemView.setOnClickListener {
 
+            holder.typeTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
+            holder.nameTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
+            holder.distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
+            holder.mLayout.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
+
+            Intent(context, MedicalDetailActivity::class.java).apply {}.run {
+                putExtra("type", holder.typeTextView.text.toString())
+                putExtra("hospitalName", holder.nameTextView.text.toString())
+                putExtra("itemPosition", position)
+                context.startActivity(this)
+            }
+        }
     }
 
     inner class MedicalViewHolder(view : View) : RecyclerView.ViewHolder(view!!){
@@ -33,33 +46,12 @@ class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: 
         val distanceTextView = view.medical_distance!!
         val mLayout = view.aid_item_layout!!
 
-        var check : Boolean = false
-
-
 
         fun bind(medicalItem : Medical_Item, context : Context){
-
             typeTextView.text = medicalItem.medicalType
             nameTextView.text = medicalItem.medicalName
             distanceTextView.text = medicalItem.distance.toString() +" Km"
 
-            itemView.setOnClickListener{
-                if(!check) {
-                    typeTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-                    nameTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-                    distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-                    mLayout.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
-
-                    check = true
-                } else if(check){
-                    typeTextView.setTextColor(ContextCompat.getColor(context, R.color.gray))
-                    nameTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
-                    distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
-                    mLayout.setBackgroundResource(R.drawable.round_corner_dark)
-
-                    check = false
-                }
-            }
         }
     }
 

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.test">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-        <activity android:name=".MedicalActivity"></activity>
+        <activity android:name=".ReportingRiskNextActivity"></activity>
+        <activity android:name=".ReportingRiskActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsXUUDlgVEszXVsWn9b_b5FPo2Bl05bQ4" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".MedicalDetailActivity" />
+        <activity android:name=".MedicalActivity" />
         <activity android:name=".LanguageSettingActivity" />
         <activity android:name=".AlarmSettingActivity" />
         <activity android:name=".ContactEditActivity" />
         <activity android:name=".ContactAddActivity" />
-        <activity android:name=".ContactRBGActivity"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".ContactRBGActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EmergencyContactActivity" />
         <activity android:name=".RiskInfoAndWeatherActivity" />
         <activity android:name=".MainActivity">

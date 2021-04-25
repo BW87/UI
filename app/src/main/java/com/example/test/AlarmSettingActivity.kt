@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_alarm_setting.*
 import kotlinx.android.synthetic.main.activity_alarm_setting.view.*
-import kotlinx.android.synthetic.main.activity_contact_r_b_g.view.*
 
 class AlarmSettingActivity : AppCompatActivity() {
     var rangeChecked : Boolean = true

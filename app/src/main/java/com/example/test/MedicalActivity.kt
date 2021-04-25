@@ -22,10 +22,10 @@ class MedicalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_medical)
 
-        medicalItemData.add(Medical_Item("Hospital", "일산병원", 1.4))
-        medicalItemData.add(Medical_Item("Parmacy", "이화약국", 0.8))
-        medicalItemData.add(Medical_Item("NGO","비정부기구", 2.0 ))
-        medicalItemData.add(Medical_Item("Partnership", "서울대병원", 8.2))
+        medicalItemData.add(Medical_Item("Hospital", "일산병원", 1.4,0))
+        medicalItemData.add(Medical_Item("Parmacy", "이화약국", 0.8,0))
+        medicalItemData.add(Medical_Item("NGO","비정부기구", 2.0 ,0))
+        medicalItemData.add(Medical_Item("Partnership", "서울대병원", 8.2,0))
 
         medicalActivityRecyclerView = aid_recyclerview
         medicalActivityRecyclerView.layoutManager = LinearLayoutManager(this).also{

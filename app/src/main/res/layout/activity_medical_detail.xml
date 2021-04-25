@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MedicalDetailActivity">
+
+    <ImageView
+        android:id="@+id/verified"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintStart_toEndOf="@+id/type_of_medical_value"
+        app:layout_constraintTop_toBottomOf="@+id/type_of_medical_aid"
+        app:srcCompat="@drawable/typeofmedicalaid_line" />
+
+    <TextView
+        android:id="@+id/verified_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Verified"
+        android:textColor="#31c58e"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/verified"
+        app:layout_constraintEnd_toEndOf="@+id/verified"
+        app:layout_constraintStart_toStartOf="@+id/verified"
+        app:layout_constraintTop_toTopOf="@+id/verified" />
+
+    <ImageView
+        android:id="@+id/open"
+        android:layout_width="46dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="82dp"
+        app:layout_constraintStart_toEndOf="@+id/opening_hours"
+        app:layout_constraintTop_toBottomOf="@+id/address_value"
+        app:srcCompat="@drawable/opening_line" />
+
+    <TextView
+        android:id="@+id/open_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="6sp"
+        android:text="Open"
+        android:textColor="#ffd500"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/open"
+        app:layout_constraintEnd_toEndOf="@+id/open"
+        app:layout_constraintStart_toStartOf="@+id/open"
+        app:layout_constraintTop_toTopOf="@+id/open" />
+
+    <TextView
+        android:id="@+id/type_of_medical_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_of_medical_aid" />
+
+    <TextView
+        android:id="@+id/address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="경기도 고양시 일산동구 백석1동 일산로 100"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medical_address" />
+
+    <TextView
+        android:id="@+id/detail_phone_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="031-123-4567"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_phone_number" />
+
+    <TextView
+        android:id="@+id/opening_hours_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="09:00 a.m. : 09:00 p.m."
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opening_hours" />
+
+    <TextView
+        android:id="@+id/capacity_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capacity" />
+
+    <TextView
+        android:id="@+id/Equipment_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="12sp"
+        android:text="None"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equipment" />
+
+    <TextView
+        android:id="@+id/type_of_medical_aid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="82dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Type of medical aid"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/medical_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="43dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Address"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_of_medical_aid" />
+
+    <TextView
+        android:id="@+id/detail_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="43dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Phone"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medical_address" />
+
+    <TextView
+        android:id="@+id/opening_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="43dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Opening Hours"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_phone_number" />
+
+    <TextView
+        android:id="@+id/capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="43dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Capacity"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opening_hours" />
+
+    <TextView
+        android:id="@+id/equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="43dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="8sp"
+        android:text="Equipment"
+        android:textColor="#939495"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capacity" />
+
+    <TextView
+        android:id="@+id/medical_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Name"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/detail_finish_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/background"
+        android:onClick="detailFinish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ico_popup_big_close_32_px" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:layout_marginTop="56dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Equipment_value"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
