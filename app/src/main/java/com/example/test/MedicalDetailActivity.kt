@@ -48,6 +48,11 @@ class MedicalDetailActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume(){
+        super.onResume()
+        mapView.onResume()
+    }
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
@@ -74,7 +79,8 @@ class MedicalDetailActivity : AppCompatActivity() {
             when {
                 checkPermissions() -> {
                     it.isMyLocationEnabled = true
-                    it.moveCamera(CameraUpdateFactory.newLatLngZoom(getMyLocation(), DEFAULT_ZOOM_LEVEL))
+                    it.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(37.64552, 126.793016), DEFAULT_ZOOM_LEVEL))
+                    it.addMarker(MarkerOptions().position(LatLng(37.64552, 126.793016)))
                 }
                 else -> {
                     it.moveCamera(CameraUpdateFactory.newLatLngZoom(CITY_HALL, DEFAULT_ZOOM_LEVEL))

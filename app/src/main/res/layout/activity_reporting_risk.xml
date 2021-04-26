@@ -6,23 +6,254 @@
     android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".ReportingRiskActivity">
+
+    <ImageView
+        android:id="@+id/fire_off"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_fire_button"
+        app:layout_constraintStart_toStartOf="@+id/choose_fire_button"
+        app:srcCompat="@drawable/ico_fire_off" />
+
+    <ImageView
+        android:id="@+id/flood_off"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_flood_button"
+        app:layout_constraintStart_toStartOf="@+id/choose_flood_button"
+        app:srcCompat="@drawable/ico_flood_off" />
+
+    <ImageView
+        android:id="@+id/drought_off"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_drought_button"
+        app:layout_constraintStart_toStartOf="@+id/choose_drought_button"
+        app:srcCompat="@drawable/ico_water_shortage_off" />
+
+    <ImageView
+        android:id="@+id/user_off"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_user_button"
+        app:layout_constraintStart_toStartOf="@+id/choose_user_button"
+        app:srcCompat="@drawable/ico_user_defined_off" />
+
     <ImageButton
-        android:id="@+id/reporting_back_button"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:id="@+id/choose_fire_button"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="reportingBack"
-        android:background="@color/background"
-        app:layout_constraintEnd_toStartOf="@+id/emergency_title"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ico_arrow_back" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark"
+        android:onClick="clickFire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_storm_button" />
+
+    <ImageButton
+        android:id="@+id/choose_flood_button"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark"
+        android:onClick="clickFlood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_fire_button" />
+
+    <ImageButton
+        android:id="@+id/choose_drought_button"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark"
+        android:onClick="clickDrought"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_flood_button" />
+
+    <ImageButton
+        android:id="@+id/choose_user_button"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark"
+        android:onClick="clickUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_drought_button" />
+
+    <TextView
+        android:id="@+id/fire_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Fire"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/fire_off"
+        app:layout_constraintTop_toTopOf="@+id/choose_fire_button" />
+
+    <TextView
+        android:id="@+id/flood_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Flood"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/flood_off"
+        app:layout_constraintTop_toTopOf="@+id/choose_flood_button" />
+
+    <TextView
+        android:id="@+id/drought_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Drought"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/drought_off"
+        app:layout_constraintTop_toTopOf="@+id/choose_drought_button" />
+
+    <TextView
+        android:id="@+id/user_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="User Defined"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/user_off"
+        app:layout_constraintTop_toTopOf="@+id/choose_user_button" />
+
+    <TextView
+        android:id="@+id/storm_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="27dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Storm(Rain)"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/storm_off"
+        app:layout_constraintTop_toTopOf="@+id/choose_storm_button" />
+
+    <ImageButton
+        android:id="@+id/choose_storm_button"
+        android:layout_width="379dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark"
+        android:onClick="clickStorm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_risk"
+         />
+
+    <ImageView
+        android:id="@+id/storm_off"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_storm_button"
+        app:layout_constraintStart_toStartOf="@+id/choose_storm_button"
+        app:srcCompat="@drawable/ico_storm_off" />
+
+    <TextView
+        android:id="@+id/choose_risk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="33dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Choose the risk"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reporting_title" />
 
     <TextView
         android:id="@+id/reporting_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="9sp"

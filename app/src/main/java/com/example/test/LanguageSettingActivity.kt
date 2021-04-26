@@ -11,18 +11,11 @@ import kotlinx.android.synthetic.main.activity_language_setting.view.*
 
 class LanguageSettingActivity : AppCompatActivity() {
 
-    var osButton : Boolean = false
-    var engButton : Boolean = true
-    var khmerButton : Boolean = true
-    var vietButton : Boolean = true
-    var korButton : Boolean = true
-
     var osTextView : TextView? = null
     var engTextView : TextView? = null
     var khmerTextView : TextView? = null
     var vietTextView : TextView? = null
     var korTextView : TextView? = null
-
 
     val context : Context = this
 

@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.WindowManager
-import androidx.core.widget.addTextChangedListener
 import kotlinx.android.synthetic.main.activity_contact_r_b_g.*
 import kotlinx.android.synthetic.main.activity_contact_r_b_g.view.*
 
@@ -28,7 +26,7 @@ class ContactRBGActivity : AppCompatActivity() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 var count : String = question_edit.text.toString()
-                count_text.setText(count.length.toString() + "/1000")
+                report_detail_edit_count.setText(count.length.toString() + "/1000")
             }
         })
     }
