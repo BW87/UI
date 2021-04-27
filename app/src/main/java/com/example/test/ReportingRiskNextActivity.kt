@@ -30,9 +30,13 @@ import java.util.*
 
 class ReportingRiskNextActivity : AppCompatActivity() {
 
+    var riskType : String = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reporting_risk_next)
+
+        riskType = intent.getStringExtra("riskType")!!
 
         val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
@@ -151,6 +155,21 @@ class ReportingRiskNextActivity : AppCompatActivity() {
 
     }
     fun goRiskReportingActivity(view: View) {
+        Intent(this, ReportingRiskActivity::class.java).run{
+            startActivity(this)
+        }
+        finish()
+    }
+
+    fun goEnd(view: View) {
+        startActivity(Intent(this, ReportingRiskEndActivity::class.java).putExtra("riskType", riskType).putExtra("situation", report_detail_edit.text.toString()).putExtra("address", report_location_address.text.toString()))
+        finish()
+    }
+
+    override fun onBackPressed() {
+        Intent(this, ReportingRiskActivity::class.java).run{
+            startActivity(this)
+        }
         finish()
     }
 }

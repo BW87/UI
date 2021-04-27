@@ -27,6 +27,7 @@ class ReportingRiskActivity : AppCompatActivity() {
     var userImg : ImageView? = null
 
     val context : Context = this
+    var riskType : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,32 +63,41 @@ class ReportingRiskActivity : AppCompatActivity() {
     }
 
     fun goNext(view: View) {
-        startActivity(Intent(this, ReportingRiskNextActivity::class.java))
+        Intent(this, ReportingRiskNextActivity::class.java).apply{}.run{
+            putExtra("riskType", riskType)
+            startActivity(this)
+        }
+        finish()
     }
 
     fun clickStorm(view: View) {
         riskAllOff()
         stormButton!!.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
         stormImg!!.setImageResource(R.drawable.ico_storm_on)
+        riskType = "Storm"
     }
     fun clickFlood(view: View) {
         riskAllOff()
         floodButton!!.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
         floodImg!!.setImageResource(R.drawable.ico_flood_on)
+        riskType = "Flood"
     }
     fun clickFire(view: View) {
         riskAllOff()
         fireButton!!.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
         fireImg!!.setImageResource(R.drawable.ico_fire_on)
+        riskType = "Fire"
     }
     fun clickDrought(view: View) {
         riskAllOff()
         droughtButton!!.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
         droughtImg!!.setImageResource(R.drawable.ico_water_shortage_on)
+        riskType = "Drought"
     }
     fun clickUser(view: View) {
         riskAllOff()
         userButton!!.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
         userImg!!.setImageResource(R.drawable.ico_user_defined_on)
+        riskType = "User Defined"
     }
 }

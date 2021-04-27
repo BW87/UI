@@ -360,6 +360,7 @@ risk."
                 android:layout_height="72dp"
                 android:layout_marginTop="304dp"
                 android:background="@color/yellow"
+                android:onClick="goEnd"
                 app:layout_constraintTop_toBottomOf="@+id/report_risk_detail_title" />
 
             <TextView
