@@ -11,21 +11,16 @@ import android.os.Build
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.content.getSystemService
-import com.google.android.gms.maps.CameraUpdateFactory
 
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.libraries.places.widget.Autocomplete
-import com.google.android.libraries.places.widget.AutocompleteActivity
 import kotlinx.android.synthetic.main.activity_choose_location.*
 import kotlinx.android.synthetic.main.activity_medical_detail.*
 import kotlinx.android.synthetic.main.activity_reporting_risk_next.*
-import java.io.IOException
 import java.util.*
 
 class ReportingRiskNextActivity : AppCompatActivity() {
@@ -38,7 +33,7 @@ class ReportingRiskNextActivity : AppCompatActivity() {
 
         riskType = intent.getStringExtra("riskType")!!
 
-        val lm = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        val locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         current_location_button?.setOnClickListener {
             allOff()
@@ -48,9 +43,9 @@ class ReportingRiskNextActivity : AppCompatActivity() {
             current_location_button_text.setTypeface(current_location_button_text.typeface, Typeface.BOLD)
             mark_img.setImageResource(R.drawable.ico_current_location_off)
 
-            val isGPSEnabled: Boolean = lm.isProviderEnabled(LocationManager.GPS_PROVIDER)
-            val isNetworkEnabled: Boolean = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
-            //매니페스트에 권한이 추가되어 있다해도 여기서 다시 한번 확인해야함
+            val isGPSEnabled: Boolean = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+            val isNetworkEnabled: Boolean = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+
             if (Build.VERSION.SDK_INT >= 23 &&
                 ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this@ReportingRiskNextActivity, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 0)
@@ -58,7 +53,7 @@ class ReportingRiskNextActivity : AppCompatActivity() {
                 when { //프로바이더 제공자 활성화 여부 체크
                     isNetworkEnabled -> {
                         val location =
-                            lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER) //인터넷기반으로 위치를 찾음
+                            locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER) //인터넷기반으로 위치를 찾음
                         Log.d("lat and long", "${location!!.latitude} and ${location.longitude}")
 
                         val address = Geocoder(this@ReportingRiskNextActivity, Locale.getDefault()).getFromLocation(
@@ -69,7 +64,7 @@ class ReportingRiskNextActivity : AppCompatActivity() {
                     }
                     isGPSEnabled -> {
                         val location =
-                            lm.getLastKnownLocation(LocationManager.GPS_PROVIDER) //GPS 기반으로 위치를 찾음
+                            locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER) //GPS 기반으로 위치를 찾음
                         Log.d("lat and long", "${location!!.latitude} and ${location.longitude}")
 
                         val address = Geocoder(this@ReportingRiskNextActivity, Locale.getDefault()).getFromLocation(
@@ -82,21 +77,9 @@ class ReportingRiskNextActivity : AppCompatActivity() {
 
                     }
                 }
-                //몇초 간격과 몇미터를 이동했을시에 호출되는 부분 - 주기적으로 위치 업데이트를 하고 싶다면 사용
-                // ****주기적 업데이트를 사용하다가 사용안할시에는 반드시 해제 필요****
-                /*lm.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-                        1000, //몇초
-                        1F,   //몇미터
-                        gpsLocationListener)
-                lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,
-                        1000,
-                        1F,
-                        gpsLocationListener)
-                //해제부분. 상황에 맞게 잘 구현하자
-                lm.removeUpdates(gpsLocationListener)*/
             }
         }
-        lm.removeUpdates(gpsLocationListener)
+        locationManager.removeUpdates(gpsLocationListener)
 
         reporting_search_button.setOnClickListener{
             allOff()
@@ -110,6 +93,21 @@ class ReportingRiskNextActivity : AppCompatActivity() {
                 startActivityForResult(this, 0)
             }
         }
+
+        report_detail_edit.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                var count= report_detail_edit.text.toString()
+                report_detail_edit_count.text = count.length.toString() + "/1000"
+            }
+        })
     }
     val gpsLocationListener = object : LocationListener {
         override fun onLocationChanged(location: Location) {
@@ -119,11 +117,12 @@ class ReportingRiskNextActivity : AppCompatActivity() {
             val altitude: Double = location.altitude
         }
 
-        //아래 3개함수는 형식상 필수부분
         override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
         override fun onProviderEnabled(provider: String) {}
         override fun onProviderDisabled(provider: String) {}
     }
+
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == 0) {
             when (resultCode) {
@@ -154,6 +153,7 @@ class ReportingRiskNextActivity : AppCompatActivity() {
         report_search_button_text.setTypeface(report_search_button_text.typeface, Typeface.NORMAL)
 
     }
+
     fun goRiskReportingActivity(view: View) {
         Intent(this, ReportingRiskActivity::class.java).run{
             startActivity(this)

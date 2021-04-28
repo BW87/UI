@@ -101,15 +101,6 @@ class MedicalDetailActivity : AppCompatActivity() {
         return LatLng(lastKnownLocation.latitude, lastKnownLocation.longitude)
     }
 
-    private fun onMyLocationButtonClick() {
-        when {
-            checkPermissions() -> googleMap?.moveCamera(
-                CameraUpdateFactory.newLatLngZoom(getMyLocation(), DEFAULT_ZOOM_LEVEL)
-            )
-            else -> Toast.makeText(applicationContext, "위치사용권한 설정에 동의해주세요", Toast.LENGTH_LONG).show()
-        }
-    }
-
     fun detailFinish(view: View) {
         finish()
     }
