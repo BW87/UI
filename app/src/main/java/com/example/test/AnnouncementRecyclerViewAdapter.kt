@@ -26,7 +26,12 @@ class AnnouncementRecyclerViewAdapter(val context : Context, val announcementIte
         holder.bind(announcementItemData[position], context)
 
         holder.goDetailButton.setOnClickListener{
-
+            Intent(context, AnnouncementDetailActivity::class.java).run{
+                putExtra("date", announcementItemData[position].date)
+                putExtra("title", announcementItemData[position].title)
+                putExtra("position", announcementItemData[position].position)
+                context.startActivity(this)
+            }
         }
     }
 
