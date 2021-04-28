@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-        <activity android:name=".ReportingRiskEndActivity"></activity>
+        <activity android:name=".AnnouncementActivity"></activity>
+        <activity android:name=".ReportingRiskEndActivity" />
         <activity android:name=".ChooseLocationActivity" />
         <activity android:name=".ReportingRiskNextActivity" />
         <activity android:name=".ReportingRiskActivity" />
