@@ -39,4 +39,8 @@ class SafetyEduActivity : AppCompatActivity() {
             startActivity(this)
         }
     }
+
+    fun test(view: View) {
+        finish()
+    }
 }

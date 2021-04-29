@@ -14,6 +14,7 @@ class AnnouncementActivity : AppCompatActivity() {
 
     val announcementItemList : ArrayList<Announcement_Item> = ArrayList()
     lateinit var announcementRecyclerView : RecyclerView
+    var mAdapter = AnnouncementRecyclerViewAdapter(this, announcementItemList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +30,8 @@ class AnnouncementActivity : AppCompatActivity() {
 
         announcementRecyclerView = announcement_recyclerview
         announcementRecyclerView.layoutManager = LinearLayoutManager(this)
-        announcementRecyclerView.addItemDecoration(VerticalItemDecorator2(dpToPx(this, 16)))
-        announcementRecyclerView.adapter = AnnouncementRecyclerViewAdapter(this, announcementItemList)
+      //  announcementRecyclerView.addItemDecoration(VerticalItemDecorator2(dpToPx(this, 16)))
+        announcementRecyclerView.adapter = mAdapter
 
     }
 

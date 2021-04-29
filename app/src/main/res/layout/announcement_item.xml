@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="98dp"
-    android:background="@color/background">
+    android:background="?android:attr/selectableItemBackground"
+    tools:background="@color/background">
 
     <TextView
         android:id="@+id/announcement_item_date"
@@ -40,7 +41,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
-        android:background="@color/background"
+        android:background="?android:attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/announcement_item_date"
         app:srcCompat="@drawable/ico_setting_arrow_right" />

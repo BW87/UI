@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         list.add(Item("Medical Aid",6))
         list.add(Item("Reporting risk",7))
         list.add(Item("Announcement",8))
-        list.add(Item("Connecting satellite",9))
+        list.add(Item("Risk Lsit",9))
 
         val mAdapter = CustomRecyclerViewAdapter(this, list)
         main_recyclerview.adapter =mAdapter

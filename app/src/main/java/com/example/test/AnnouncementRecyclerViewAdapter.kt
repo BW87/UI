@@ -25,7 +25,7 @@ class AnnouncementRecyclerViewAdapter(val context : Context, val announcementIte
     override fun onBindViewHolder(holder: AnnouncementViewHolder, position: Int) {
         holder.bind(announcementItemData[position], context)
 
-        holder.goDetailButton.setOnClickListener{
+        holder.itemView.setOnClickListener{
             Intent(context, AnnouncementDetailActivity::class.java).run{
                 putExtra("date", announcementItemData[position].date)
                 putExtra("title", announcementItemData[position].title)

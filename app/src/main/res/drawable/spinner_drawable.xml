@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="379dp" android:height="56dp">
+        <shape>
+            <solid android:color="#3d414a" /> <!-- 배경 -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+    <item android:right="16dp">
+        <bitmap android:src="@drawable/ico_select_down_arrow"  android:gravity="center_vertical|right" />
+    </item>
+</layer-list>

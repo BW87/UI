@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-        <activity android:name=".SafetyEduDetailActivity"></activity>
+        <activity android:name=".RiskListActivity"></activity>
+        <activity android:name=".SafetyEduDetailActivity" />
         <activity android:name=".AnnouncementDetailActivity" />
         <activity android:name=".SafetyEduActivity" />
         <activity android:name=".AnnouncementActivity" />
