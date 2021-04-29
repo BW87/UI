@@ -35,12 +35,6 @@ class AnnouncementActivity : AppCompatActivity() {
 
     }
 
-    fun dpToPx(context : Context, dp : Int) : Int{
-        val px : Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), context.resources.displayMetrics)
-            .toInt()
-        return px
-    }
-
     fun announcementBack(view: View) {
         finish()
     }
