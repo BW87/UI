@@ -1,7 +1,9 @@
 package com.example.test
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Rect
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
@@ -9,9 +11,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_risk_list.*
+import kotlinx.android.synthetic.main.activity_risk_list.view.*
 
 class RiskListActivity : AppCompatActivity() {
 
@@ -52,6 +56,13 @@ class RiskListActivity : AppCompatActivity() {
 
                 }
 
+
+
+                if(position == select_type_risk_spinner.selectedItemPosition){
+                    (v.findViewById<View>(R.id.tvItemSpinner) as TextView).setTextColor(
+                        ContextCompat.getColor(context, R.color.white))
+                }
+
                 return v
             }
 
@@ -67,10 +78,10 @@ class RiskListActivity : AppCompatActivity() {
         select_type_risk_spinner.setSelection(spinnerAdapter.count)
 
         riskListItemList.add(Risk_List_Item("Storm", "8 m ago", "0.68km", "change_storm_img"))
-        riskListItemList.add(Risk_List_Item("Fire", "8 m ago", "0.68km", "change_fire_img"))
-        riskListItemList.add(Risk_List_Item("Flood", "8 m ago", "0.68km", "change_flood_img"))
-        riskListItemList.add(Risk_List_Item("Drought", "8 m ago", "0.68km", "change_drought_img"))
-        riskListItemList.add(Risk_List_Item("User Defined", "8 m ago", "0.68km", "change_user_defined_img"))
+        riskListItemList.add(Risk_List_Item("Fire", "9 m ago", "0.91km", "change_fire_img"))
+        riskListItemList.add(Risk_List_Item("Flood", "15 m ago", "1.17km", "change_flood_img"))
+        riskListItemList.add(Risk_List_Item("Drought", "19 m ago", "1.84km", "change_drought_img"))
+        riskListItemList.add(Risk_List_Item("User Defined", "26 m ago", "2.03km", "change_user_defined_img"))
 
         riskListRecyclerView = risk_list_recyclerview
         riskListRecyclerView.addItemDecoration(CustomItemDecorator(dpToPx(this, 16)))

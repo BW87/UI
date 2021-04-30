@@ -29,6 +29,9 @@ class RiskListRecyclerViewAdapter(val context : Context, val riskListItemData : 
         holder.itemView.setOnClickListener {
 
             Intent(context, RiskListDetailActivity::class.java).run{
+                putExtra("riskType", holder.riskListTitle.text.toString())
+                putExtra("riskElapsed", holder.riskElapsedTime.text.toString())
+                putExtra("riskDistance", holder.riskDistance.text.toString())
                 context.startActivity(this)
             }
         }
