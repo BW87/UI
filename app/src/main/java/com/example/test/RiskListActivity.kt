@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_risk_list.*
@@ -14,10 +16,12 @@ import kotlinx.android.synthetic.main.activity_risk_list.*
 class RiskListActivity : AppCompatActivity() {
 
     val profileItemList : ArrayList<Profile_Item> = ArrayList()
+    val riskListItemList : ArrayList<Risk_List_Item> = ArrayList()
     lateinit var profileRecyclerView : RecyclerView
+    lateinit var riskListRecyclerView : RecyclerView
+    var rAdapter = RiskListRecyclerViewAdapter(this, riskListItemList)
     var mAdapter = ProfileRecyclerViewAdapter(this, profileItemList)
-    val spinnerItems = arrayOf("Storm","Fire","Flood","Drought","User Defiend")
-
+    val spinnerItemsData = arrayOf("Storm","Fire","Flood","Drought","User Defined")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +35,48 @@ class RiskListActivity : AppCompatActivity() {
         profileRecyclerView.layoutManager = LinearLayoutManager(this).also {
             it.orientation = LinearLayoutManager.HORIZONTAL
         }
-        profileRecyclerView.addItemDecoration(HorizontalItemDecorater(dpToPx(this, 16)))
+
+        profileRecyclerView.addItemDecoration(HorizontalItemDecorator(dpToPx(this, 16)))
         profileRecyclerView.adapter = mAdapter
 
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerItems)
+
+        val spinnerAdapter = object : ArrayAdapter<String>(this, R.layout.spinner_item) {
+
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val v = super.getView(position, convertView, parent)
+
+                if(position == count){
+
+                    (v.findViewById<View>(R.id.tvItemSpinner) as TextView).text = ""
+                    (v.findViewById<View>(R.id.tvItemSpinner) as TextView).hint = getItem(count)
+
+                }
+
+                return v
+            }
+
+            override fun getCount(): Int {
+                return super.getCount()-1
+            }
+        }
+
+        spinnerAdapter.addAll(spinnerItemsData.toMutableList())
+        spinnerAdapter.add("Search by type of risk")
+
         select_type_risk_spinner.adapter = spinnerAdapter
+        select_type_risk_spinner.setSelection(spinnerAdapter.count)
+
+        riskListItemList.add(Risk_List_Item("Storm", "8 m ago", "0.68km", "change_storm_img"))
+        riskListItemList.add(Risk_List_Item("Fire", "8 m ago", "0.68km", "change_fire_img"))
+        riskListItemList.add(Risk_List_Item("Flood", "8 m ago", "0.68km", "change_flood_img"))
+        riskListItemList.add(Risk_List_Item("Drought", "8 m ago", "0.68km", "change_drought_img"))
+        riskListItemList.add(Risk_List_Item("User Defined", "8 m ago", "0.68km", "change_user_defined_img"))
+
+        riskListRecyclerView = risk_list_recyclerview
+        riskListRecyclerView.addItemDecoration(CustomItemDecorator(dpToPx(this, 16)))
+        riskListRecyclerView.layoutManager = LinearLayoutManager(this)
+        riskListRecyclerView.adapter = rAdapter
+
     }
 
     fun dpToPx(context : Context, dp : Int) : Int{
@@ -44,13 +85,22 @@ class RiskListActivity : AppCompatActivity() {
         return px
     }
 
+
 }
 
-class HorizontalItemDecorater(private val divHeight : Int) : RecyclerView.ItemDecoration() {
+class HorizontalItemDecorator(private val divHeight : Int) : RecyclerView.ItemDecoration() {
     @Override
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
         outRect.right = divHeight
         outRect.left = divHeight
+    }
+}
+
+class CustomItemDecorator(private val divHeight : Int) : RecyclerView.ItemDecoration() {
+    @Override
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+        super.getItemOffsets(outRect, view, parent, state)
+        outRect.bottom = divHeight
     }
 }

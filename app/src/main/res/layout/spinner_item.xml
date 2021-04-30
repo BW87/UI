@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:id="@+id/tvItemSpinner"
+    android:gravity="left"
+    android:textStyle="normal"
+    android:textSize="16sp"
+    android:textColor="@color/black"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:textColorHint="@color/white"
+    android:letterSpacing="-0.03"
+    android:lineSpacingExtra="5sp">
+
+</TextView>
