@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/round_corner_dark" android:state_enabled="false"/>
+
+    <item android:state_pressed="true">
+
+        <ripple tools:targetApi="lollipop" android:color="#eaeaea">
+            <item android:drawable="@drawable/round_corner_dark"/>
+        </ripple>
+
+    </item>
+
+</selector>

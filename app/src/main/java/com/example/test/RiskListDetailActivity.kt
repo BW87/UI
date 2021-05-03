@@ -17,6 +17,10 @@ class RiskListDetailActivity : AppCompatActivity() {
     lateinit var photoRecyclerView : RecyclerView
     val photoAdapter = PhotoRecyclerViewAdapter(this, photoItemList)
 
+    val commentItemList = ArrayList<Comment_Item>()
+    lateinit var commentRecyclerView : RecyclerView
+    val commentAdapter = CommentsRecyclerViewAdapter(this, commentItemList)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_risk_list_detail)
@@ -35,6 +39,16 @@ class RiskListDetailActivity : AppCompatActivity() {
         }
         photoRecyclerView.addItemDecoration(HorizontalItemDecorator(dpToPx(this, 16)))
         photoRecyclerView.adapter = photoAdapter
+
+        commentItemList.add(Comment_Item("홍길동", "여러분, 이번 태풍은 정말 심각합니다. 점점 더 비바람이 세지고 있어요! 모두 대피하세요", "16s ago"))
+        commentItemList.add(Comment_Item("서보원", "신촌동 주민센터 근처에 계신분들 강풍 및 비바람 조심하세요!", "5m 16s ago"))
+        commentItemList.add(Comment_Item("서보연", "여러분, 이번 태풍은 정말 심각합니다. 점점 더 비바람이 세지고 있어요! 모두 대피하세요", "6m 16s ago"))
+
+        commentRecyclerView = comment_recyclerview
+        commentRecyclerView.layoutManager = LinearLayoutManager(this)
+        commentRecyclerView.addItemDecoration(VerticalItemDecorator(dpToPx(this, 16)))
+        commentRecyclerView.adapter = commentAdapter
+
     }
 
     fun dpToPx(context : Context, dp : Int) : Int{

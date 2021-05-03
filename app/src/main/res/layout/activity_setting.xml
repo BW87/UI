@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SettingActivity">
+
+    <ImageView
+        android:id="@+id/setting_about_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_about_rbg_button"
+        app:srcCompat="@drawable/ico_about_rbg" />
+
+    <ImageView
+        android:id="@+id/setting_contact_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_contact_rbg_button"
+        app:srcCompat="@drawable/ico_contact_rbg" />
+
+    <ImageView
+        android:id="@+id/setting_personal_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_personal_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_personal_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_personal_button"
+        app:srcCompat="@drawable/ico_personal_information" />
+
+    <ImageView
+        android:id="@+id/setting_language_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_language_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_language_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_language_button"
+        app:srcCompat="@drawable/ico_language_setting" />
+
+    <ImageView
+        android:id="@+id/setting_emergency_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_emergency_buitton"
+        app:srcCompat="@drawable/ico_emergency_call" />
+
+    <ImageView
+        android:id="@+id/setting_alarm_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_alarm_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_alarm_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_alarm_button"
+        app:srcCompat="@drawable/ico_alarm_setting" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_alarm_button"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_alarm_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_alarm_button"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_emergency_buitton"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_language_button"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_language_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_language_button"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow4"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_personal_button"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_personal_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_personal_button"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow5"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_contact_rbg_button"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <ImageView
+        android:id="@+id/setting_right_arrow6"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintEnd_toEndOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_about_rbg_button"
+        app:srcCompat="@drawable/ico_setting_arrow_right" />
+
+    <TextView
+        android:id="@+id/setting_go_alarm_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Alarm"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_alarm_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_alarm_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_alarm_button" />
+
+    <TextView
+        android:id="@+id/setting_go_emergency_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Emergency Call"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_emergency_buitton"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_emergency_buitton" />
+
+    <TextView
+        android:id="@+id/setting_go_language_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Language"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_language_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_language_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_language_button" />
+
+    <TextView
+        android:id="@+id/setting_go_personal_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Personal Information"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_personal_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_personal_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_personal_button" />
+
+    <TextView
+        android:id="@+id/setting_go_contact_rbg_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="Contact RBG"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_contact_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_contact_rbg_button" />
+
+    <TextView
+        android:id="@+id/setting_go_about_rbg_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:elevation="3dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+        android:text="About RBG"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintStart_toStartOf="@+id/setting_go_about_rbg_button"
+        app:layout_constraintTop_toTopOf="@+id/setting_go_about_rbg_button" />
+
+    <ImageButton
+        android:id="@+id/setting_go_alarm_button"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <ImageButton
+        android:id="@+id/setting_go_emergency_buitton"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_go_alarm_button" />
+
+    <ImageButton
+        android:id="@+id/setting_go_language_button"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_go_emergency_buitton" />
+
+    <ImageButton
+        android:id="@+id/setting_go_personal_button"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_go_language_button" />
+
+    <ImageButton
+        android:id="@+id/setting_go_contact_rbg_button"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_go_personal_button" />
+
+    <ImageButton
+        android:id="@+id/setting_go_about_rbg_button"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_dark_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setting_go_contact_rbg_button" />
+
+    <TextView
+        android:id="@+id/setting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="9sp"
+
+        android:text="Settings"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="379dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="80dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#36425b">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginBottom="83dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ico_call_default" />
+
+            <TextView
+                android:id="@+id/setting_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="86dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="4sp"
+                android:text="Seo BoWon"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView8" />
+
+            <TextView
+                android:id="@+id/serial_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginBottom="48dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="8sp"
+                android:text="S/N"
+                android:textColor="#939495"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/serial_number_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginBottom="48dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="6sp"
+                android:text="s00000000000"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/serial_number" />
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginBottom="16dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="8sp"
+                android:text="ver"
+                android:textColor="#939495"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/version_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginBottom="16dp"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="6sp"
+                android:text="1.09"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/version" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@color/background"
+        app:menu="@menu/bottom_tab_item"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/bottom_item_selector_color"
+        app:itemTextColor="@color/bottom_item_selector_color"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,4 +74,7 @@ class PhotoItemHolder(view : View) : RecyclerView.ViewHolder(view){
 
 class PhotoHeaderHolder(view : View) : RecyclerView.ViewHolder(view){
 
+    val photoAdd = view.photo_add
+
+
 }

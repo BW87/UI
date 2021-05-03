@@ -28,6 +28,9 @@ class CustomRecyclerViewAdapter(private val context : Context, private val items
                     7 -> Intent(context, ReportingRiskActivity::class.java).apply { }.run { context.startActivity(this) }
                     8 -> Intent(context, AnnouncementActivity::class.java).apply{}.run{context.startActivity(this)}
                     9 -> Intent(context, RiskListActivity::class.java).run{context.startActivity(this)}
+                    10 -> Intent(context, SettingActivity::class.java).run{context.startActivity(this)}
+                    11 -> Intent(context, PersonalInformationActivity::class.java).run{context.startActivity(this)}
+
                 }
             }
         }
