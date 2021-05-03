@@ -13,6 +13,62 @@
         >
 
         <TextView
+            android:id="@+id/setting_save_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:letterSpacing="-0.06"
+            android:text="Save"
+            android:textColor="#222222"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/setting_save_button"
+            app:layout_constraintEnd_toEndOf="@+id/setting_save_button"
+            app:layout_constraintStart_toStartOf="@+id/setting_save_button"
+            app:layout_constraintTop_toTopOf="@+id/setting_save_button" />
+
+        <ImageButton
+            android:id="@+id/setting_save_button"
+            android:layout_width="379dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/yellow_button_ripple"
+            android:letterSpacing="-0.06"
+            android:textAllCaps="false"
+            android:textColor="#222222"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_email_edit" />
+
+        <TextView
+            android:id="@+id/setting_social_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="8sp"
+            android:text="Social Information"
+            android:textColor="#939495"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_top_line3" />
+
+        <ImageView
+            android:id="@+id/setting_top_line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#3d414a"
+            app:layout_constraintTop_toBottomOf="@+id/medicine_in_use_edit"
+            app:srcCompat="@drawable/div_line"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
             android:id="@+id/personal_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -139,6 +195,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/personal_gender_edit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="379dp"
             android:layout_height="72dp"
             android:layout_marginStart="16dp"
@@ -147,29 +204,257 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:hint="Gender"
-            android:textColorHint="#939495"
-            app:hintTextColor="#939495"
             android:letterSpacing="-0.045"
+            android:textColorHint="#939495"
             android:textSize="18sp"
-            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
+            app:hintTextColor="#939495"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personal_serial_number_edit"
-            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+            app:layout_constraintTop_toBottomOf="@+id/personal_serial_number_edit">
 
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:foreground="@drawable/round_corner"
 
-                android:inputType="none"/>
+                android:inputType="none" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ImageView
+            android:id="@+id/setting_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#3d414a"
+            app:layout_constraintTop_toBottomOf="@+id/personal_gender_edit"
+            app:srcCompat="@drawable/div_line"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/setting_medical_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="8sp"
+            android:text="Medical Information"
+            android:textColor="#939495"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_top_line" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/birth_year_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Birth Year"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_medical_information">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/blood_type_edit"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Blood type"
+            android:letterSpacing="-0.045"
+            android:textColorHint="#939495"
+            android:textSize="18sp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birth_year_edit">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="@drawable/round_corner"
+
+                android:inputType="none" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/height_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Height"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blood_type_edit"
+            app:suffixText="cm"
+            app:suffixTextColor="#939495">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weight_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Weight"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height_edit"
+            app:suffixText="kg"
+            app:suffixTextColor="#939495">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+            <ImageView
+                android:id="@+id/setting_bottom_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3d414a"
+                app:srcCompat="@drawable/div_line" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/medicine_in_use_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Medicine in use"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight_edit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Mobile"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setting_social_information">>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/setting_email_edit"
+            android:layout_width="379dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Email(Facebook)"
+            android:textColorHint="#939495"
+            app:hintTextColor="#939495"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mobile_edit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner"
+                android:letterSpacing="-0.045"
+                android:textColorHint="#939495"
+                android:textSize="18sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
