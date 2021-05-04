@@ -353,7 +353,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/height_edit"
             app:suffixText="kg"
-            app:suffixTextColor="#939495">
+            app:suffixTextColor="#939495"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

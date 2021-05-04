@@ -8,9 +8,22 @@
     android:background="@color/background">
 
     <ImageView
+        android:id="@+id/notice_on"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="3dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ico_notice_on" />
+
+    <ImageView
         android:id="@+id/notice"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
@@ -35,8 +48,8 @@
 
     <ImageView
         android:id="@+id/loud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -49,8 +62,12 @@
         android:id="@+id/top_tab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="32dp"
+        app:tabPaddingBottom="5dp"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextAppearance="@style/top_tab_text"
         android:background="@color/background"
+        app:tabBackground="@drawable/change_tab_border"
         app:tabTextColor="@color/gray"
         app:tabSelectedTextColor="@color/yellow"
         app:layout_constraintTop_toBottomOf="@+id/logo"
@@ -74,7 +91,11 @@
         android:background="@color/background"
         app:menu="@menu/bottom_tab_item"
         app:labelVisibilityMode="labeled"
+        app:itemIconSize="24dp"
         app:itemIconTint="@color/bottom_item_selector_color"
         app:itemTextColor="@color/bottom_item_selector_color"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:itemTextAppearanceActive="@style/bottom_tab_text"
+        app:itemTextAppearanceInactive="@style/bottom_tab_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

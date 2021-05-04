@@ -32,9 +32,9 @@ class RiskViewHolder(view : View) : RecyclerView.ViewHolder(view!!){
         riskDate.text = riskItem.riskDateValue
         if(riskItem.riskImage != "") {
             val resourceId = context.resources.getIdentifier(riskItem.riskImage, "drawable", context.packageName)
-            riskImage?.setImageResource(resourceId)
+            riskImage?.setBackgroundResource(resourceId)
         } else {
-            riskImage?.setImageResource(R.mipmap.ic_launcher)
+            riskImage?.setBackgroundResource(R.mipmap.ic_launcher)
         }
     }
 

@@ -14,8 +14,8 @@
             android:id="@+id/risk_fragment_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="42dp"
-            android:layout_marginLeft="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:letterSpacing="-0.03"
             android:lineSpacingExtra="9sp"
             android:text="Real-time Risk Info"
@@ -27,7 +27,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/risk_recyclerview"
-            android:layout_width="328dp"
+            android:layout_width="379dp"
             android:layout_height="434dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"

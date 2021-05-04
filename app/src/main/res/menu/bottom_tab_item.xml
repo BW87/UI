@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/main"
         android:icon="@drawable/ico_tab_bar_home"
         android:enabled="true"
         android:checked="true"
+
         android:title="Main" />
 
     <item
@@ -19,7 +21,6 @@
         android:icon="@drawable/ico_tab_bar_medical_support"
         android:enabled="true"
         android:checked="true"
-
         android:title="Medical Aid"/>
 
     <item
@@ -27,7 +28,8 @@
         android:icon="@drawable/ico_tab_bar_emergency_call"
         android:enabled="true"
         android:checked="true"
-        android:title="Emergency Contact"/>
+        android:title="emergency contact"
+        />
 
     <item
         android:id="@+id/setting"

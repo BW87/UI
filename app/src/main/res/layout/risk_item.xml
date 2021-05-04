@@ -8,7 +8,7 @@
     android:background="@color/background">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="328dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:background="@color/background"
         app:cardCornerRadius="10dp"
@@ -24,13 +24,13 @@
 
             <ImageView
                 android:id="@+id/risk_image"
-                android:layout_width="328dp"
+                android:layout_width="379dp"
                 android:layout_height="273dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/background" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="328dp"
+                android:layout_width="379dp"
                 android:layout_height="105dp"
                 android:layout_gravity="center_horizontal"
                 android:background="#3d414a">
@@ -38,31 +38,33 @@
                 <TextView
                     android:id="@+id/risk_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="36dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
+                    android:font="@font/noto_sans_cj_kkr_bold"
+                    android:textStyle="bold"
                     android:letterSpacing="-0.02"
                     android:lineSpacingExtra="12sp"
                     android:text="Risk"
                     android:textColor="#ffffff"
                     android:textSize="24sp"
-                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/risk_date"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="29dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
+                    android:textStyle="normal"
+                    android:font="@font/noto_sans_cj_kkr_regular"
                     android:letterSpacing="-0.03"
                     android:lineSpacingExtra="9sp"
                     android:text="Date"
                     android:textColor="#ffffff"
                     android:textSize="20sp"
-                    android:textStyle="normal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/risk_name" />
 
@@ -72,28 +74,31 @@
                     android:layout_height="32dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/ico_artificial_satellite_yl"
                     android:layout_marginRight="16dp"
+                    android:src="@drawable/ico_artificial_satellite_yl"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:layout_width="328dp"
+                android:layout_width="379dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center_horizontal"
-                android:background="#eaeaea"
+                android:background="@color/background"
                 android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="10"
+                    android:background="#eaeaea"
+                    android:layout_marginRight="2dp">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        >
 
                         <ImageButton
                             android:id="@+id/safety_edu_button"
@@ -112,11 +117,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="10"
+                    android:layout_marginRight="2dp"
+                    android:background="#eaeaea">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        >
 
                         <ImageButton
                             android:id="@+id/map_button"
@@ -137,7 +145,10 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="10"
+                    android:background="#eaeaea"
+
+                    >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
