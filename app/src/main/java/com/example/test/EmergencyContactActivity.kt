@@ -34,31 +34,7 @@ class EmergencyContactActivity : AppCompatActivity() {
         contactRecyclerView.adapter = mAdapter
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        /*if(intent.hasExtra("newName") && intent.hasExtra("newNumber")) {
-            val addName = intent.getStringExtra("newName")!!
-            val addNumber = intent.getStringExtra("newNumber")!!
-
-            mAdapter.addItem(Contact_Item("ico_call_default", addName, addNumber))
-            mAdapter.notifyDataSetChanged()
-        }*/
-
-        if(intent.hasExtra("position") && intent.hasExtra("mName") && intent.hasExtra("mNumber")){
-
-            val editName = intent.getStringExtra("mName")!!
-            val editNumber = intent.getStringExtra("mNumber")!!
-            val editPosition = intent.getIntExtra("position",0)
-
-            mAdapter.modifyItem(Contact_Item("ico_call_default", editName, editNumber), editPosition)
-            mAdapter.notifyDataSetChanged()
-        }
-    }
-
     fun goMainActivity(view: View) {
-        val back = Intent(this, MainActivity::class.java)
-        startActivity(back)
         finish()
     }
 
@@ -70,14 +46,26 @@ class EmergencyContactActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        when(resultCode){
-            0 -> {
-                val addName = data?.getStringExtra("newName")!!
-                val addNumber = data?.getStringExtra("newNumber")!!
-                mAdapter.addItem(Contact_Item("ico_call_default", addName, addNumber))
-                mAdapter.notifyDataSetChanged()
-            }
+        if(requestCode == 0){
 
+            when(resultCode){
+                0 -> {
+                    val addName = data?.getStringExtra("newName")!!
+                    val addNumber = data?.getStringExtra("newNumber")!!
+                    mAdapter.addItem(Contact_Item("ico_call_default", addName, addNumber))
+                    mAdapter.notifyDataSetChanged()
+                }
+            }
+        } else if(requestCode == 1){
+            when(resultCode){
+                    0 -> {
+                    val editName = data?.getStringExtra("editName")!!
+                    val editNumber = data?.getStringExtra("editNumber")!!
+                    val editPosition = data?.getIntExtra("editPosition",0)
+                    mAdapter.modifyItem(Contact_Item("ico_call_default", editName, editNumber), editPosition)
+                    mAdapter.notifyDataSetChanged()
+                }
+            }
         }
     }
 
@@ -92,15 +80,6 @@ class VerticalItemDecorator(private val divHeight : Int) : RecyclerView.ItemDeco
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
         outRect.top = divHeight
-        outRect.bottom = divHeight
-    }
-}
-
-
-class VerticalItemDecorator2(private val divHeight : Int) : RecyclerView.ItemDecoration(){
-    @Override
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        super.getItemOffsets(outRect, view, parent, state)
         outRect.bottom = divHeight
     }
 }

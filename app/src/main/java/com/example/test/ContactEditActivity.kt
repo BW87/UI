@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_contact_edit.*
 
 class ContactEditActivity : AppCompatActivity() {
 
-    val eContext = EmergencyContactActivity()
     var position = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,7 +83,6 @@ class ContactEditActivity : AppCompatActivity() {
         })
     }
     fun editFinish(view: View) {
-        startActivity(Intent(this, EmergencyContactActivity::class.java))
         finish()
     }
 
@@ -95,11 +93,11 @@ class ContactEditActivity : AppCompatActivity() {
     }
 
     fun modify(view: View) {
-        Intent(this, EmergencyContactActivity::class.java).apply{}.run{
-            putExtra("mName", edit_name_edit.text.toString())
-            putExtra("mNumber", edit_number_edit.text.toString())
-            putExtra("position", position)
-            startActivity(this)
+        Intent(this, EmergencyContactActivity::class.java).run{
+            putExtra("editName", edit_name_edit.text.toString())
+            putExtra("editNumber", edit_number_edit.text.toString() )
+            putExtra("editPosition", position)
+            setResult(0, this)
         }
         finish()
     }

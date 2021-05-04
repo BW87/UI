@@ -16,5 +16,7 @@ class SafetyEduDetailActivity : AppCompatActivity() {
         safety_edu_detail_type.text = type
     }
 
-    fun safetyDetailBack(view: View) {}
+    fun safetyDetailBack(view: View) {
+        finish()
+    }
 }

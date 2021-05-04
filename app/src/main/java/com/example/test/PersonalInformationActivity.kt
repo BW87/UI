@@ -21,7 +21,15 @@ class PersonalInformationActivity : AppCompatActivity() {
 
         val bloodAdapter = ArrayAdapter(this, R.layout.blood_type_item, bloodItems)
         (blood_type_edit.editText as AutoCompleteTextView).setAdapter(bloodAdapter)
+
+        
     }
 
-    fun personalBack(view: View) {}
+    fun personalBack(view: View) {
+        finish()
+    }
+
+    fun save(view: View) {
+        finish()
+    }
 }

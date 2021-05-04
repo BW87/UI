@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -55,6 +56,14 @@ class RiskListDetailActivity : AppCompatActivity() {
         val px : Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), context.resources.displayMetrics)
                 .toInt()
         return px
+    }
+
+    fun riskDetailGoSafeEdu(view: View) {
+        startActivity(Intent(this, SafetyEduActivity::class.java))
+    }
+
+    fun riskDetailBack(view: View) {
+        finish()
     }
 }
 

@@ -217,6 +217,7 @@ of questions. "
             android:letterSpacing="-0.06"
             android:text="Send"
             android:stateListAnimator="@null"
+            android:onClick="contactRBGEnd"
             android:textAllCaps="false"
             app:backgroundTint="@color/yellow" />
     </RelativeLayout>

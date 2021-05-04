@@ -35,6 +35,7 @@
                         android:layout_marginRight="1dp"
                         android:gravity="center"
                         android:layout_weight="10"
+                        android:onClick="riskDetailGoSafeEdu"
                         android:background="#eaeaea">
 
                         <ImageView
@@ -186,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="37dp"
+                    android:layout_marginTop="39dp"
                     android:letterSpacing="-0.02"
                     android:lineSpacingExtra="12sp"
                     android:text="TextView"
@@ -215,6 +216,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:background="#3d414a"
+                    android:onClick="riskDetailBack"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ico_arrow_back" />

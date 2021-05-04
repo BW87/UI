@@ -26,12 +26,10 @@ class ReportingRiskEndActivity : AppCompatActivity() {
     }
 
     fun finishReport(view: View) {
-        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 
     fun goDone(view: View) {
-        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }

@@ -1,11 +1,11 @@
 package com.example.test
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_contact_r_b_g.*
 import kotlinx.android.synthetic.main.activity_contact_r_b_g.view.*
 
@@ -29,13 +29,13 @@ class ContactRBGActivity : AppCompatActivity() {
                 report_detail_edit_count.setText(count.length.toString() + "/1000")
             }
         })
+
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
+
     }
 
     fun contactFinish(view: View) {
-        Intent(this, MainActivity::class.java).apply{}.run{
-            startActivity(this)
-            finish()
-        }
+        finish()
     }
 
     fun clicked(view: View) {
@@ -46,5 +46,9 @@ class ContactRBGActivity : AppCompatActivity() {
             view.check_button.setImageResource(R.drawable.chk_box_off)
             checked = true
         }
+    }
+
+    fun contactRBGEnd(view: View) {
+        finish()
     }
 }
