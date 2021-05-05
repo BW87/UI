@@ -57,16 +57,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:background="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/add_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/yellow"
+            android:background="@drawable/rec_yellow_button_ripple"
             android:text="Add"
-            android:stateListAnimator="@null"
             android:onClick="goAdd"
             android:textSize="24sp"
             android:textColor="#222222"

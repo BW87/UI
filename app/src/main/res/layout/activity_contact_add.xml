@@ -7,6 +7,22 @@
     android:background="@color/background"
     tools:context=".ContactAddActivity">
 
+    <TextView
+        android:id="@+id/add_button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:fontFamily="@font/noto_sans_cj_kkr_bold"
+        android:letterSpacing="-0.06"
+        android:text="Add"
+        android:textColor="#222222"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/add2_button"
+        app:layout_constraintEnd_toEndOf="@+id/add2_button"
+        app:layout_constraintStart_toStartOf="@+id/add2_button"
+        app:layout_constraintTop_toTopOf="@+id/add2_button" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -104,7 +120,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_image" />
 
-    <Button
+    <ImageButton
         android:id="@+id/add2_button"
         android:layout_width="328dp"
         android:layout_height="64dp"
@@ -113,15 +129,9 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:background="@color/yellow"
-        android:letterSpacing="-0.06"
+        android:background="@drawable/yellow_button_ripple"
         android:onClick="newItem"
-        android:text="Add"
-        android:textAllCaps="false"
         android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"

@@ -66,15 +66,17 @@ class ContactAddActivity : AppCompatActivity() {
     }
 
     fun addFinish(view: View) {
-        startActivity(Intent(this, EmergencyContactActivity::class.java))
+        Intent(this, EmergencyContactActivity::class.java).run{
+            setResult(4, this)
+        }
         finish()
     }
 
-    fun editFinish(view: View) {}
-
 
     override fun onBackPressed() {
-        startActivity(Intent(this, EmergencyContactActivity::class.java))
+        Intent(this, EmergencyContactActivity::class.java).run{
+            setResult(5, this)
+        }
         finish()
     }
 
@@ -87,5 +89,5 @@ class ContactAddActivity : AppCompatActivity() {
         finish()
     }
 
-    fun modify(view: View) {}
+
 }

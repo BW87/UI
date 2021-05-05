@@ -5,7 +5,7 @@
     android:id="@+id/aid_item_layout"
     android:layout_width="379dp"
     android:layout_height="72dp"
-    android:background="@drawable/round_corner_dark">
+    android:background="@drawable/change_round_conrner_dark">
 
     <TextView
         android:id="@+id/medical_type"
@@ -17,7 +17,7 @@
         android:letterSpacing="-0.02"
         android:lineSpacingExtra="6sp"
         android:text="Type"
-        android:textColor="#939495"
+        android:textColor="@drawable/change_gray_text_color"
         android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="9sp"
         android:text="Name"
-        android:textColor="#ffffff"
+        android:textColor="@drawable/change_text_color"
         android:textSize="18sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +49,7 @@
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="9sp"
         android:text="Distance"
-        android:textColor="#ffffff"
+        android:textColor="@drawable/change_text_color"
         android:textSize="20sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"

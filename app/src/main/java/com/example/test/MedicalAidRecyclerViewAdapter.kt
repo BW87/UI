@@ -26,11 +26,6 @@ class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: 
         holder.bind(medicalItemList[position], context)
         holder.itemView.setOnClickListener {
 
-            holder.typeTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-            holder.nameTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-            holder.distanceTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow))
-            holder.mLayout.setBackgroundResource(R.drawable.round_corner_dark_yellowl)
-
             Intent(context, MedicalDetailActivity::class.java).apply {}.run {
                 putExtra("type", holder.typeTextView.text.toString())
                 putExtra("hospitalName", holder.nameTextView.text.toString())

@@ -117,6 +117,7 @@
         android:layout_marginRight="2dp"
         android:letterSpacing="-0.06"
         android:text="Delete"
+        android:onClick="deleteButton"
         android:textAllCaps="false"
         android:textColor="#222222"
         android:textSize="24sp"

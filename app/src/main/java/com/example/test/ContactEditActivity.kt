@@ -83,6 +83,9 @@ class ContactEditActivity : AppCompatActivity() {
         })
     }
     fun editFinish(view: View) {
+        Intent(this, EmergencyContactActivity::class.java).run{
+            setResult(2, this)
+        }
         finish()
     }
 
@@ -98,6 +101,20 @@ class ContactEditActivity : AppCompatActivity() {
             putExtra("editNumber", edit_number_edit.text.toString() )
             putExtra("editPosition", position)
             setResult(0, this)
+        }
+        finish()
+    }
+    fun deleteButton(view: View) {
+        Intent(this, EmergencyContactActivity::class.java).run{
+            putExtra("position", position)
+            setResult(1, this)
+        }
+        finish()
+    }
+
+    override fun onBackPressed() {
+        Intent(this, EmergencyContactActivity::class.java).run{
+            setResult(2, this)
         }
         finish()
     }

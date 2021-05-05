@@ -55,6 +55,8 @@ class EmergencyContactActivity : AppCompatActivity() {
                     mAdapter.addItem(Contact_Item("ico_call_default", addName, addNumber))
                     mAdapter.notifyDataSetChanged()
                 }
+                else -> return
+
             }
         } else if(requestCode == 1){
             when(resultCode){
@@ -64,7 +66,14 @@ class EmergencyContactActivity : AppCompatActivity() {
                     val editPosition = data?.getIntExtra("editPosition",0)
                     mAdapter.modifyItem(Contact_Item("ico_call_default", editName, editNumber), editPosition)
                     mAdapter.notifyDataSetChanged()
-                }
+                    }
+
+                    1 -> {
+                        val dPosition = data!!.getIntExtra("position",0)
+                        mAdapter.deleteItem(dPosition)
+                        mAdapter.notifyDataSetChanged()
+                    }
+                else -> return
             }
         }
     }
