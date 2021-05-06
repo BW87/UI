@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
@@ -94,6 +95,11 @@ class RiskListActivity : AppCompatActivity() {
         val px : Int = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), context.resources.displayMetrics)
                 .toInt()
         return px
+    }
+
+    fun goReportingRisk(view: View) {
+
+        startActivity(Intent(this, ReportingRiskActivity::class.java))
     }
 
 

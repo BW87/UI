@@ -30,9 +30,9 @@ class RiskListDetailActivity : AppCompatActivity() {
         risk_list_detail_elapsed_time_value.text = intent.getStringExtra("riskElapsed")
         risk_list_detail_distance_value.text = intent.getStringExtra("riskDistance")
 
-        photoItemList.add(Photo_Item("circle"))
-        photoItemList.add(Photo_Item("circle"))
-        photoItemList.add(Photo_Item("circle"))
+        photoItemList.add(Photo_Item("storm_sample"))
+        photoItemList.add(Photo_Item("flood_sample"))
+        photoItemList.add(Photo_Item("fire_sample"))
 
         photoRecyclerView = photo_recyclerview
         photoRecyclerView.layoutManager = LinearLayoutManager(this).also{
