@@ -1,9 +1,11 @@
 package com.example.test
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
@@ -16,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_risk_info_and_weather.view.*
 class RiskInfoAndWeatherActivity : AppCompatActivity() {
     lateinit var noticeOn : ImageView
 
+    var slidingClose : ImageButton? = null
     var mDrawer : DrawerLayout? = null
 
     private val adapter by lazy{RiskInfoAndWeatherAdapter(supportFragmentManager)}
@@ -27,6 +30,16 @@ class RiskInfoAndWeatherActivity : AppCompatActivity() {
 
         noticeOn = notice_on
         mDrawer = drawer
+        slidingClose = alarm_history_close
+
+        mDrawer!!.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN)
+        mDrawer!!.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+
+        slidingClose!!.setOnClickListener {
+            if(mDrawer!!.isDrawerOpen(Gravity.LEFT)){
+                mDrawer!!.closeDrawer(Gravity.LEFT)
+            }
+        }
 
         view_pager.adapter = RiskInfoAndWeatherActivity@adapter
         top_tab.setupWithViewPager(view_pager)
@@ -50,6 +63,7 @@ class RiskInfoAndWeatherActivity : AppCompatActivity() {
             }
 
         })
+        
     }
 
     fun loudClick(view: View) {

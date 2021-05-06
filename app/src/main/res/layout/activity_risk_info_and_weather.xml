@@ -106,7 +106,6 @@
             app:itemIconTint="@color/bottom_item_selector_color"
             app:itemTextColor="@color/bottom_item_selector_color"
             app:itemTextAppearanceActive="@style/bottom_tab_text"
-            app:itemTextAppearanceInactive="@style/bottom_tab_text"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 

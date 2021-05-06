@@ -213,6 +213,7 @@
             app:boxCornerRadiusTopEnd="10dp"
             app:boxCornerRadiusTopStart="10dp"
             app:hintTextColor="#939495"
+            app:boxBackgroundColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personal_serial_number_edit">
@@ -220,7 +221,7 @@
             <AutoCompleteTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:foreground="@drawable/round_corner"
+
 
                 android:inputType="none" />
 
@@ -294,6 +295,7 @@
             android:letterSpacing="-0.045"
             android:textColorHint="#939495"
             android:textSize="18sp"
+            app:boxBackgroundColor="@color/white"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -303,13 +305,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/birth_year_edit">
 
+
             <AutoCompleteTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:foreground="@drawable/round_corner"
+                    android:id="@+id/blood_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
 
-                android:inputType="none" />
 
+                    android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -354,8 +357,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/height_edit"
             app:suffixText="kg"
-            app:suffixTextColor="#939495"
-            >
+            app:suffixTextColor="#939495">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

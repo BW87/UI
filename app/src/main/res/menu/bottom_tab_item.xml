@@ -6,7 +6,6 @@
         android:icon="@drawable/ico_tab_bar_home"
         android:enabled="true"
         android:checked="true"
-
         android:title="Main" />
 
     <item
