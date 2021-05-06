@@ -2,6 +2,7 @@ package com.example.test
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_alarm_history.*
 import kotlinx.android.synthetic.main.activity_alarm_history.view.*
 
@@ -16,4 +17,5 @@ class AlarmHistoryActivity : AppCompatActivity() {
         alarm_view_pager.adapter = AlarmHistoryActivity@adapter
         alarm_tab.setupWithViewPager(alarm_view_pager)
     }
+
 }

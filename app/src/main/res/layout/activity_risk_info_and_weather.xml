@@ -8,99 +8,122 @@
     android:background="@color/background">
 <androidx.drawerlayout.widget.DrawerLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/drawer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/notice_on"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:elevation="3dp"
+            android:onClick="noticeClick"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ico_notice_on" />
+
+        <ImageView
+            android:id="@+id/notice"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:onClick="noticeClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ico_notice" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginRight="160dp"
+            app:layout_constraintEnd_toStartOf="@+id/loud"
+            app:layout_constraintStart_toEndOf="@+id/notice"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/launcher_bk" />
+
+        <ImageView
+            android:id="@+id/loud"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:onClick="loudClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ico_loud" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/top_tab"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            app:tabPaddingBottom="5dp"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextAppearance="@style/top_tab_text"
+            android:background="@color/background"
+            app:tabBackground="@drawable/change_tab_border"
+            app:tabTextColor="@color/gray"
+            app:tabSelectedTextColor="@color/yellow"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            tools:layout_editor_absoluteX="0dp">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="510dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_tab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_tab" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@color/background"
+            app:menu="@menu/bottom_tab_item"
+            app:labelVisibilityMode="labeled"
+            app:itemIconSize="24dp"
+            app:itemIconTint="@color/bottom_item_selector_color"
+            app:itemTextColor="@color/bottom_item_selector_color"
+            app:itemTextAppearanceActive="@style/bottom_tab_text"
+            app:itemTextAppearanceInactive="@style/bottom_tab_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="379dp"
+        android:layout_height="match_parent"
+        android:id="@+id/main_drawer"
+        android:layout_gravity ="left">
+
+        <include layout="@layout/activity_alarm_history"/>
+
+    </FrameLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
-    <ImageView
-        android:id="@+id/notice_on"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:elevation="3dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ico_notice_on" />
 
-    <ImageView
-        android:id="@+id/notice"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:onClick="noticeClick"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ico_notice" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginRight="160dp"
-        app:layout_constraintEnd_toStartOf="@+id/loud"
-        app:layout_constraintStart_toEndOf="@+id/notice"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/launcher_bk" />
-
-    <ImageView
-        android:id="@+id/loud"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:onClick="loudClick"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ico_loud" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/top_tab"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        app:tabPaddingBottom="5dp"
-        app:tabIndicatorHeight="0dp"
-        app:tabTextAppearance="@style/top_tab_text"
-        android:background="@color/background"
-        app:tabBackground="@drawable/change_tab_border"
-        app:tabTextColor="@color/gray"
-        app:tabSelectedTextColor="@color/yellow"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        tools:layout_editor_absoluteX="0dp">
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="510dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_tab"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_tab" />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_tab"
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:background="@color/background"
-        app:menu="@menu/bottom_tab_item"
-        app:labelVisibilityMode="labeled"
-        app:itemIconSize="24dp"
-        app:itemIconTint="@color/bottom_item_selector_color"
-        app:itemTextColor="@color/bottom_item_selector_color"
-        app:itemTextAppearanceActive="@style/bottom_tab_text"
-        app:itemTextAppearanceInactive="@style/bottom_tab_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
