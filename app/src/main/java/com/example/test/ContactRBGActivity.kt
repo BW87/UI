@@ -15,23 +15,7 @@ class ContactRBGActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_r_b_g)
 
-        question_edit.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
-
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                var count : String = question_edit.text.toString()
-                report_detail_edit_count.setText(count.length.toString() + "/1000")
-            }
-        })
-
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
-
     }
 
     fun contactFinish(view: View) {

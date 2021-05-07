@@ -102,6 +102,48 @@ class RiskListActivity : AppCompatActivity() {
             }
         })
 
+        bottom_tab.selectedItemId = R.id.riskList
+
+        bottom_tab.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.main -> {
+                    val intent = Intent(this, RiskInfoAndWeatherActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
+                R.id.riskList -> {
+
+                    true
+                }
+
+                R.id.medicalAid -> {
+                    val intent = Intent(this, MedicalActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
+                R.id.emergencyContact -> {
+                    val intent = Intent(this, EmergencyContactActivity::class.java)
+                    startActivity(intent)
+
+                    true
+                }
+
+                R.id.setting -> {
+                    val intent = Intent(this, SettingActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
+                    true
+                }
+
+                else -> false
+            }
+        }
+
     }
 
     fun dpToPx(context : Context, dp : Int) : Int{

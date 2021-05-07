@@ -29,6 +29,8 @@ class LanguageSettingActivity : AppCompatActivity() {
         vietTextView = viet_test
         korTextView = kor_test
 
+
+        bottom_tab.selectedItemId = R.id.setting
     }
 
     fun allOff(){

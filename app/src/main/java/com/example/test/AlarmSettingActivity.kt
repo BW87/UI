@@ -76,6 +76,8 @@ class AlarmSettingActivity : AppCompatActivity() {
         fireColor = fire
         userColor = user
         tideColor = tide
+
+        bottom_tab.selectedItemId = R.id.setting
     }
 
     fun rangeAllOff(){

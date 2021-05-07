@@ -158,6 +158,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -188,6 +191,9 @@
                 android:letterSpacing="-0.045"
 
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -273,6 +279,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -337,6 +346,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -366,6 +378,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -399,6 +414,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -424,6 +442,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 
@@ -453,6 +474,9 @@
                 android:letterSpacing="-0.045"
                 android:textColorHint="#939495"
                 android:textSize="18sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
 
                 >
 

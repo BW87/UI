@@ -4,12 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_alarm_history.*
 import kotlinx.android.synthetic.main.activity_medical_detail.view.*
 import kotlinx.android.synthetic.main.activity_risk_info_and_weather.*
@@ -63,6 +65,46 @@ class RiskInfoAndWeatherActivity : AppCompatActivity() {
             }
 
         })
+
+        bottom_tab.setOnNavigationItemSelectedListener{
+           when(it.itemId){
+               R.id.main -> {
+                   true
+               }
+
+               R.id.riskList -> {
+                   val intent = Intent(this, RiskListActivity::class.java)
+                   startActivity(intent)
+                   finish()
+                   true
+               }
+
+               R.id.medicalAid -> {
+                   val intent = Intent(this, MedicalActivity::class.java)
+                   startActivity(intent)
+                   finish()
+
+                   true
+               }
+
+               R.id.emergencyContact -> {
+                   val intent = Intent(this, EmergencyContactActivity::class.java)
+                   startActivity(intent)
+
+                   true
+               }
+
+               R.id.setting -> {
+                   val intent = Intent(this, SettingActivity::class.java)
+                   startActivity(intent)
+                   finish()
+
+                   true
+               }
+
+               else -> false
+           }
+        }
         
     }
 

@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,6 +36,48 @@ class MedicalActivity : AppCompatActivity() {
         val mAdapter = MedicalAidRecyclerViewAdapter(this, medicalItemData)
         medicalActivityRecyclerView.adapter = mAdapter
         medicalActivityRecyclerView.addItemDecoration(VerticalSpaceItemDecoration(dpToPx(this,16)))
+
+        bottom_tab.selectedItemId = R.id.medicalAid
+
+        bottom_tab.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.main -> {
+                    val intent = Intent(this, RiskInfoAndWeatherActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
+                R.id.riskList -> {
+                    val intent = Intent(this, RiskListActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
+                R.id.medicalAid -> {
+
+                    true
+                }
+
+                R.id.emergencyContact -> {
+                    val intent = Intent(this, EmergencyContactActivity::class.java)
+                    startActivity(intent)
+
+                    true
+                }
+
+                R.id.setting -> {
+                    val intent = Intent(this, SettingActivity::class.java)
+                    startActivity(intent)
+                    finish()
+
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     inner class VerticalSpaceItemDecoration(val verticalSpaceHeight : Int) : RecyclerView.ItemDecoration(){
