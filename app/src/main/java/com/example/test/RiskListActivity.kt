@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
@@ -12,9 +13,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_risk_list.*
 import kotlinx.android.synthetic.main.activity_risk_list.view.*
 
@@ -32,18 +35,8 @@ class RiskListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_risk_list)
 
-        profileItemList.add(Profile_Item("서보원", "경기도 성남시 분당구 삼평동 514-132"))
-        profileItemList.add(Profile_Item("서보현", "대구광역시 달서구 월성동 서한 이다음 아파트"))
-        profileItemList.add(Profile_Item("서보연", "경기도 성남시 분당구 정자동 58-4"))
-
-        profileRecyclerView = profile_recyclerview
-        profileRecyclerView.layoutManager = LinearLayoutManager(this).also {
-            it.orientation = LinearLayoutManager.HORIZONTAL
-        }
-
-        profileRecyclerView.addItemDecoration(HorizontalItemDecorator(dpToPx(this, 16)))
-        profileRecyclerView.adapter = mAdapter
-
+        val profileAdapter = ProfilePagerAdapter(profileList)
+        risk_list_profile_viewpager.adapter = profileAdapter
 
         val spinnerAdapter = object : ArrayAdapter<String>(this, R.layout.spinner_item) {
 
@@ -89,6 +82,26 @@ class RiskListActivity : AppCompatActivity() {
         riskListRecyclerView.layoutManager = LinearLayoutManager(this)
         riskListRecyclerView.adapter = rAdapter
 
+        risk_list_profile_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
+
+            @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+            override fun onPageSelected(position: Int) {
+                risk_list_gray_circle_1.setImageDrawable(getDrawable(R.drawable.gray_circle))
+                risk_list_gray_circle_2.setImageDrawable(getDrawable(R.drawable.gray_circle))
+                risk_list_gray_circle_3.setImageDrawable(getDrawable(R.drawable.gray_circle))
+
+                when(position){
+                    0 -> risk_list_gray_circle_1.setImageDrawable(getDrawable(R.drawable.white_circle))
+                    1 -> risk_list_gray_circle_2.setImageDrawable(getDrawable(R.drawable.white_circle))
+                    2 -> risk_list_gray_circle_3.setImageDrawable(getDrawable(R.drawable.white_circle))
+                }
+            }
+        })
+
     }
 
     fun dpToPx(context : Context, dp : Int) : Int{
@@ -102,7 +115,14 @@ class RiskListActivity : AppCompatActivity() {
         startActivity(Intent(this, ReportingRiskActivity::class.java))
     }
 
+    companion object{
 
+        val profileList = arrayListOf(
+            Profile_Item("서보원", "경기도 성남시 분당구 삼평동 514-132"),
+            Profile_Item("김대현", "대구광역시 달서구 월성동 서한 이다음 아파트"),
+            Profile_Item("홍길동", "경기도 성남시 분당구 정자동 58-4")
+        )
+    }
 }
 
 class HorizontalItemDecorator(private val divHeight : Int) : RecyclerView.ItemDecoration() {

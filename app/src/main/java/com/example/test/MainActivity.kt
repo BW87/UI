@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         list.add(Item("Risk List", 9))
         list.add(Item("Settings",10))
         list.add(Item("Personal information",11))
-        list.add(Item("Alarm History",12))
 
         val mAdapter = CustomRecyclerViewAdapter(this, list)
         main_recyclerview.adapter =mAdapter

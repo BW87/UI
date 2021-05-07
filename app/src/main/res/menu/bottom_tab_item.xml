@@ -6,28 +6,28 @@
         android:icon="@drawable/ico_tab_bar_home"
         android:enabled="true"
         android:checked="true"
-        android:title="Main" />
+        android:title="홈" />
 
     <item
         android:id="@+id/riskList"
         android:icon="@drawable/ico_tab_bar_disaster_list"
         android:enabled="true"
         android:checked="true"
-        android:title="Risk List"/>
+        android:title="재난 목록"/>
 
     <item
         android:id="@+id/medicalAid"
         android:icon="@drawable/ico_tab_bar_medical_support"
         android:enabled="true"
         android:checked="true"
-        android:title="Medical Aid"/>
+        android:title="구호소"/>
 
     <item
         android:id="@+id/emergencyContact"
         android:icon="@drawable/ico_tab_bar_emergency_call"
         android:enabled="true"
         android:checked="true"
-        android:title="emergency contact"
+        android:title="비상 연락망"
         />
 
     <item
@@ -35,5 +35,5 @@
         android:icon="@drawable/ico_tab_bar_app_setting"
         android:enabled="true"
         android:checked="true"
-        android:title="Setting"/>
+        android:title="설정"/>
 </menu>
