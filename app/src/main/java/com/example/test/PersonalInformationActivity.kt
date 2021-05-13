@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_personal_information.*
 import kotlinx.android.synthetic.main.blood_type_item.*
 
 class PersonalInformationActivity : AppCompatActivity() {
+    // 자기 개인정보 넣는 액팁티
 
     val genderItems = listOf("Male", "Female", "Etc")
     val bloodItems = listOf("A", "B", "O", "AB")
@@ -27,14 +28,14 @@ class PersonalInformationActivity : AppCompatActivity() {
         val bloodAdapter = ArrayAdapter(this, R.layout.blood_type_item, bloodItems)
         (blood_type_edit.editText as AutoCompleteTextView).setAdapter(bloodAdapter)
 
-        (blood_type_edit.editText as AutoCompleteTextView).setOnItemClickListener { adapterView, view, i, l ->
-
-            val string = adapterView.getItemAtPosition(i).toString()
-            Log.i("mystring", string)
-
-
-
-        }
+//        (blood_type_edit.editText as AutoCompleteTextView).setOnItemClickListener { adapterView, view, i, l ->
+//
+//            val string = adapterView.getItemAtPosition(i).toString()
+//            Log.i("mystring", string)
+//
+//
+//
+//        }
     }
 
     fun personalBack(view: View) {

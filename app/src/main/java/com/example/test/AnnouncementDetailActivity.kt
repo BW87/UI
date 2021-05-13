@@ -6,6 +6,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_announcement_detail.*
 
 class AnnouncementDetailActivity : AppCompatActivity() {
+    // 공지사항 리스트에서 아이템 눌렀을때 표시해줄 액티비티
     var getDate : String = ""
     var getTitle : String = ""
     var position : Int = 0

@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,18 @@ class RiskFragmentRecyclerViewAdapter(val context : Context, val riskItemList: A
 
     override fun onBindViewHolder(holder: RiskViewHolder, position: Int) {
         holder.bind(riskItemList[position], context)
+
+        holder.itemView.safety_edu_button.setOnClickListener {
+            Intent(context, SafetyEduActivity::class.java).run{
+                context.startActivity(this)
+            }
+        }
+
+        holder.itemView.map_button.setOnClickListener {
+            Intent(context, MainCurrentLocationActivity::class.java).run{
+                context.startActivity(this)
+            }
+        }
     }
 }
 

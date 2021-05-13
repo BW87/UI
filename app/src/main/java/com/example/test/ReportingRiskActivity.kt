@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_alarm_setting.*
 import kotlinx.android.synthetic.main.activity_reporting_risk.*
 
 class ReportingRiskActivity : AppCompatActivity() {
+    // 재난 신고 처음 부분 액티비티
 
     var stormButton : ImageButton? = null
     var fireButton : ImageButton? = null

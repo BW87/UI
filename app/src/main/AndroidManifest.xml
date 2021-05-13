@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-        <activity android:name=".AlarmHistoryActivity"></activity>
+        <activity android:name=".MainCurrentLocationActivity"></activity>
+        <activity android:name=".AlarmHistoryActivity" />
         <activity android:name=".PersonalInformationActivity" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".RiskListDetailActivity" />

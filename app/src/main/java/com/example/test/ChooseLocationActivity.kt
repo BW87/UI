@@ -32,6 +32,7 @@ import kotlinx.android.synthetic.main.activity_medical_detail.*
 import kotlinx.android.synthetic.main.activity_reporting_risk_next.*
 
 class ChooseLocationActivity : AppCompatActivity() {
+    // report risk next 액티비티에서 search 버튼을 누르면 표시해줄 액티비티
 
     private val MY_API_KEY : String = "AIzaSyBsXUUDlgVEszXVsWn9b_b5FPo2Bl05bQ4"
     private val AUTOCOMPLETE_REQUEST_CODE = 1

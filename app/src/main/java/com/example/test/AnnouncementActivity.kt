@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_announcement.*
 
 class AnnouncementActivity : AppCompatActivity() {
+    // 공지사항 보여주는 액티비티 위에 safety 교육으로 가는 버튼도 있음
 
     val announcementItemList : ArrayList<Announcement_Item> = ArrayList()
     lateinit var announcementRecyclerView : RecyclerView

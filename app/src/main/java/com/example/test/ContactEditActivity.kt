@@ -11,7 +11,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_contact_edit.*
 
 class ContactEditActivity : AppCompatActivity() {
-
+    //emergency 액티비티의 recyclerview 아이템을 수정할 때 사용할 액티비티, 기능구현 되있음
     var position = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {

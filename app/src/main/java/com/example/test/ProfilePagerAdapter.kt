@@ -7,6 +7,7 @@ import androidx.viewpager.widget.PagerAdapter
 import kotlinx.android.synthetic.main.profile_item.view.*
 
 class ProfilePagerAdapter (val list : ArrayList<Profile_Item>) : PagerAdapter(){
+    //profile이 나오는 pager에 대한 아댑터
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val inflater = LayoutInflater.from(container.context)

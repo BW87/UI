@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_contact_r_b_g.*
 import kotlinx.android.synthetic.main.activity_emergency_contact.*
 
 class ContactAddActivity : AppCompatActivity() {
+    //emergency 액티비티의 추가 버튼 눌렀을 때 표시할 페이지 및 동작 기능구현함
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

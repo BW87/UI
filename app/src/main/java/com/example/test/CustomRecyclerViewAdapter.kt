@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomRecyclerViewAdapter(private val context : Context, private val items: ArrayList<Item>) : RecyclerView.Adapter<CustomRecyclerViewAdapter.ItemViewHolder>() {
-
+    //main 액티비티에 있는 recyclerview 어댑터
     inner class ItemViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         private val itemText = itemView.findViewById<TextView>(R.id.itemName)
 

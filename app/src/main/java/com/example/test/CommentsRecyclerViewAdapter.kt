@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.comment_item.view.*
 import kotlinx.android.synthetic.main.contact_item.view.*
 
 class CommentsRecyclerViewAdapter(val context : Context, val commentItemData : ArrayList<Comment_Item> ) : RecyclerView.Adapter<CommentViewHolder>(){
-
+    // risk list detail 에 댓글 recycleView의 어댑ㅌ
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentViewHolder {
         return CommentViewHolder(LayoutInflater.from(context).inflate(R.layout.comment_item, parent, false))

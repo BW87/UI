@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.fragment_alarm_history_announcement.view.*
 
 
 class AlarmHistoryAnnouncementFragment : Fragment() {
+    //Announcement 탭을 눌렀을대 나올 Announcement Fragment
 
     val alarmHistoryAnnouncementData : ArrayList<AlarmHistoryAnnouncement_Item> = ArrayList()
     lateinit var alarmHistoryAnnouncementRecyclerView : RecyclerView

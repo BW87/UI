@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.announcement_item.view.*
 import kotlinx.android.synthetic.main.contact_item.view.*
 
 class AnnouncementRecyclerViewAdapter(val context : Context, val announcementItemData : ArrayList<Announcement_Item> ) : RecyclerView.Adapter<AnnouncementViewHolder>(){
-
+    // 공지사항 액티비티에 있는 RecyclerView의 어댑터
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnnouncementViewHolder {
         return AnnouncementViewHolder(LayoutInflater.from(context).inflate(R.layout.announcement_item, parent, false))

@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.contact_item.view.*
 import kotlinx.android.synthetic.main.photo_item.view.*
 
 class PhotoRecyclerViewAdapter(val context : Context, val photoItemData : ArrayList<Photo_Item> ) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+    //risk list detail 에 있는 recyclerview 어댑터
 
     companion object{
 

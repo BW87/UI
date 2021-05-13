@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_medical.*
 import kotlinx.android.synthetic.main.aid_item.view.*
 
 class MedicalActivity : AppCompatActivity() {
+    // 근처 구호소를 보여주는 액티비티
 
     private val medicalItemData : ArrayList<Medical_Item> = ArrayList()
     private lateinit var medicalActivityRecyclerView : RecyclerView

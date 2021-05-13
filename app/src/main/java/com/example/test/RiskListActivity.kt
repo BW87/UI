@@ -25,10 +25,8 @@ class RiskListActivity : AppCompatActivity() {
 
     val profileItemList : ArrayList<Profile_Item> = ArrayList()
     val riskListItemList : ArrayList<Risk_List_Item> = ArrayList()
-    lateinit var profileRecyclerView : RecyclerView
     lateinit var riskListRecyclerView : RecyclerView
     var rAdapter = RiskListRecyclerViewAdapter(this, riskListItemList)
-    var mAdapter = ProfileRecyclerViewAdapter(this, profileItemList)
     val spinnerItemsData = arrayOf("Storm","Fire","Flood","Drought","User Defined")
 
     override fun onCreate(savedInstanceState: Bundle?) {

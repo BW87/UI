@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_language_setting.*
 import kotlinx.android.synthetic.main.activity_language_setting.view.*
 
 class LanguageSettingActivity : AppCompatActivity() {
+    // 언어 선택 액티비티
 
     var osTextView : TextView? = null
     var engTextView : TextView? = null

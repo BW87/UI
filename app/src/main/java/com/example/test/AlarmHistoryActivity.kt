@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_alarm_history.*
 import kotlinx.android.synthetic.main.activity_alarm_history.view.*
 
 class AlarmHistoryActivity : AppCompatActivity() {
+    //sliding drawer에 들어갈 액티비티
 
     private val adapter by lazy{AlarmHistoryAdapter(supportFragmentManager)}
 

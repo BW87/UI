@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_emergency_contact.view.*
 import kotlinx.android.synthetic.main.contact_item.view.*
 
 class ContactRecyclerViewAdapter(val context : Context, val contactItemList : ArrayList<Contact_Item> ) : RecyclerView.Adapter<ContactViewHolder>(){
-
+    //emergency 액티비티 안의 recyclerview 어댑터
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         return ContactViewHolder(LayoutInflater.from(context).inflate(R.layout.contact_item, parent, false))

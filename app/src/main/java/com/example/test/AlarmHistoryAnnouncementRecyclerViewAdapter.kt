@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.alarm_history_risk_item.view.*
 import kotlinx.android.synthetic.main.risk_item.view.*
 
 class AlarmHistoryAnnouncementRecyclerViewAdapter(val context : Context, val alarmHistoryAnnouncementItem: ArrayList<AlarmHistoryAnnouncement_Item> ) : RecyclerView.Adapter<AlarmAnnouncementViewHolder>(){
-
+    //Announcement RecyclerView 어댑터
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlarmAnnouncementViewHolder {
         return AlarmAnnouncementViewHolder(LayoutInflater.from(context).inflate(R.layout.alarm_history_announce_item, parent, false))
     }

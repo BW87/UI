@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.alarm_history_risk_item.view.*
 import kotlinx.android.synthetic.main.risk_item.view.*
 
 class AlarmHistoryRiskFragmentRecyclerViewAdapter(val context : Context, val alarmHistoryRiskList: ArrayList<AlarmHistoryRisk_Item> ) : RecyclerView.Adapter<AlarmRiskViewHolder>(){
-
+    // Risk RecyclerView의 어댑터
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlarmRiskViewHolder {
         return AlarmRiskViewHolder(LayoutInflater.from(context).inflate(R.layout.alarm_history_risk_item, parent, false))
     }

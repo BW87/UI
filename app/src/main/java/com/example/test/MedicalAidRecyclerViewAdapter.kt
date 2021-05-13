@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.aid_item.view.*
 import kotlinx.android.synthetic.main.risk_item.view.*
 
 class MedicalAidRecyclerViewAdapter(val context : Context, val medicalItemList: ArrayList<Medical_Item> ) : RecyclerView.Adapter<MedicalAidRecyclerViewAdapter.MedicalViewHolder>(){
+    //medical 액티비티의 recyclerview 어댑터
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicalViewHolder {
         return MedicalViewHolder(LayoutInflater.from(context).inflate(R.layout.aid_item, parent, false))

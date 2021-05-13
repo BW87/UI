@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 
 class AlarmHistoryAdapter (fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
+    // sliding drawer 상단 tab layout에 관한 어댑터
     private val fragmentTitleList = mutableListOf("Risk", "Announcement")
     override fun getItem(position: Int): Fragment {
         return when(position){

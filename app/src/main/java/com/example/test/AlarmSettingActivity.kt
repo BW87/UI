@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_alarm_setting.*
 import kotlinx.android.synthetic.main.activity_alarm_setting.view.*
 
 class AlarmSettingActivity : AppCompatActivity() {
+    //AlarmSetting 액티비티 버튼 많은 화면
     var rangeChecked : Boolean = true
     var locationChecked : Boolean = true
 
@@ -129,6 +130,12 @@ class AlarmSettingActivity : AppCompatActivity() {
             rangeChecked = true
             rangeAllOff()
             riskAllOff()
+        }
+
+        if(!rangeChecked){
+            rangeAllOff()
+            rangeLeftButton!!.setBackgroundResource(R.drawable.select_on)
+            leftLocationColor!!.setTextColor(ContextCompat.getColor(context, R.color.yellow))
         }
     }
 

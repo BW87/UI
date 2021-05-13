@@ -7,6 +7,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_reporting_risk_end.*
 
 class ReportingRiskEndActivity : AppCompatActivity() {
+    // 제닌 신고 마지막 액티비티
 
     var riskType : String = ""
     var riskAddress : String = ""

@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_emergency_contact.*
 import kotlinx.android.synthetic.main.contact_item.*
 
 class EmergencyContactActivity : AppCompatActivity() {
+    //긴급 연락망을 보여주고 추가하고 삭제하고 수정할 수 있는 액티비티
     private val contactItemData : ArrayList<Contact_Item> = ArrayList()
     private lateinit var contactRecyclerView : RecyclerView
     val mAdapter = ContactRecyclerViewAdapter(this, contactItemData)

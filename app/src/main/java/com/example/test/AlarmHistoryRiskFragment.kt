@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_alarm_history_risk.view.*
 
 class AlarmHistoryRiskFragment : Fragment() {
+    // sliding drawer 에 Risk 탭에 해당하는 Fragment
     val alarmHistoryRiskData : ArrayList<AlarmHistoryRisk_Item> = ArrayList()
     lateinit var alarmHistoryRiskRecyclerView : RecyclerView
 
